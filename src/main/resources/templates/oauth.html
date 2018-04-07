@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="utf-8">
+<title>OAuth</title>
+</head>
+<body>
+    <h1>Listing OAuth Authentication Properties</h1>
+    <ul>
+        <li sec:authentication="name"></li>
+        <li sec:authentication="oAuth2Request.clientId"></li>
+        <li th:each="scope : ${#authentication.oAuth2Request.scope}" th:text="${scope}"></li>
+    </ul>
+</body>
+</html>

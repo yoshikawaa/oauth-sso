@@ -1,0 +1,20 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /cathub
+spring:
+  thymeleaf:
+    cache: false
+security:
+  oauth2:
+    client:
+      client-id: input your client id
+      client-secret: input your client secret
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://api.github.com/user
+      prefer-token-info: false
+    sso:
+      login-path: /login

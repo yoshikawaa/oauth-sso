@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="utf-8">
+<title>Repos</title>
+</head>
+<body>
+    <h1>Listing Repositories owned <span sec:authentication="name"></span></h1>
+    <ul>
+        <li th:each="repo : ${repos}" th:object="${repo}">
+            <a th:text="*{name}" th:href="*{htmlUrl}"></a>
+        </li>
+    </ul>
+</body>
+</html>
