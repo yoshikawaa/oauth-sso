@@ -1,6 +1,8 @@
 target
 log
+application-proxy.yml
 .settings
 .classpath
 .project
 .springBeans
+.factorypath
